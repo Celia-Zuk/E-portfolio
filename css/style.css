@@ -1,0 +1,477 @@
+/* Style CSS pour l'e-Portfolio de Célia Zuk */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fbf5f3;
+    color: #061a40;
+}
+
+header {
+    background: linear-gradient(135deg, #061a40 60%, #d51b1b);
+    color: #fbf5f3;
+    padding: 100px 20px; /* Agrandissement de la hauteur du haut de page */
+    text-align: center;
+    position: relative;
+}
+
+.header-content h1 {
+    font-family: 'BRING RACE', sans-serif;
+    font-size: 4.5rem; /* Légèrement plus grand */
+    margin: 0;
+}
+
+.header-content h2 {
+    font-family: 'BRING RACE', sans-serif;
+    font-size: 2.8rem;
+    margin: 10px 0 0 0;
+    color: #d51b1b;
+    display: inline-block;
+    border-bottom: 4px solid #ffbf00; /* Trait jaune ajouté */
+}
+
+.header-content .lang {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.2rem;
+    background-color: #d51b1b;
+    color: #fbf5f3;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #061a40;
+    gap: 20px;
+    padding: 15px 0;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fbf5f3;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #ffbf00;
+    color: #061a40;
+    border-radius: 5px;
+}
+
+main {
+    padding: 50px; /* Espacement agrandi */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-family: 'BRING RACE', sans-serif;
+    color: #061a40;
+    border-bottom: 3px solid #061a40;
+    display: inline-block;
+    margin-bottom: 30px;
+	font-size: 36px;
+}
+
+.parcours {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.parcours .entry {
+    background-color: #fbf5f3; /* Blanc cassé */
+    color: #061a40;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.parcours .entry:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.parcours .entry h3 {
+    margin: 0;
+}
+
+.parcours .entry p {
+    margin: 10px 0 0;
+}
+
+.competences {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.competences .competence {
+    text-align: center;
+    width: 120px;
+    background-color: #fbf5f3;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.competences .competence:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.competences img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Espacement agrandi entre les projets */
+}
+
+.project {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fbf5f3;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.project h3 {
+    margin-top: 0;
+    color: #061a40;
+}
+
+.project p {
+    margin: 10px 0;
+}
+
+.project a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    color: #fbf5f3;
+    background-color: #d51b1b;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.project a:hover {
+    background-color: #ffbf00;
+    color: #061a40;
+}
+
+footer {
+    background-color: #061a40;
+    color: #fbf5f3;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+/* Réduction de la taille de l'entête sur les pages des projets */
+.project-header {
+    height: 120px; /* Réduction de la hauteur */
+    padding: 10px; /* Réduction de l'espacement */
+    background-color: #f5f5f5; /* Facultatif : ajustez le style si nécessaire */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-header h1 {
+    font-size: 30px; /* Taille de la police réduite */
+    font-family: 'BRING RACE', sans-serif;
+}
+
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #061a40; /* Assurez-vous que la couleur correspond au design */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+button {
+    display: block; /* Permet de centrer le bouton avec margin auto */
+    margin: 30px auto; /* Centre le bouton horizontalement et ajoute un espace au-dessus et en dessous */
+    padding: 15px 30px; /* Taille du bouton */
+    font-size: 1.5rem; /* Taille du texte plus grande */
+    font-weight: bold; /* Texte en gras */
+    color: #fbf5f3; /* Couleur du texte */
+    background-color: #d51b1b; /* Rouge */
+    border: none; /* Supprime les bordures */
+    border-radius: 8px; /* Arrondi des coins */
+    cursor: pointer; /* Change le curseur en pointeur au survol */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transition pour l'effet au survol */
+}
+
+button:hover {
+    background-color: #ffbf00; /* Jaune au survol */
+    color: #061a40; /* Couleur du texte devient bleu foncé */
+    transform: scale(1.05); /* Légère mise en avant au survol */
+}
+
+#competences h3 {
+    text-decoration: underline;
+    text-underline-offset: 5px; /* Distance entre le texte et le soulignement */
+    text-decoration-thickness: 2px; /* Épaisseur du soulignement */
+    text-decoration-color: #061a40; /* Couleur du soulignement */
+    margin-bottom: 20px; /* Espacement sous le sous-titre (optionnel) */
+}
+
+.lang {
+    position: absolute; /* Position absolue dans l'en-tête */
+    top: 20px; /* Distance depuis le haut */
+    right: 20px; /* Distance depuis le bord droit */
+}
+
+.lang img {
+    width: 25px; /* Taille du logo */
+    height: auto; /* Préserve les proportions */
+}
+
+#presentation h3 {
+    text-decoration: underline;
+    text-underline-offset: 5px; /* Distance entre le texte et le soulignement */
+    text-decoration-thickness: 2px; /* Épaisseur du soulignement */
+    text-decoration-color: #061a40; /* Couleur du soulignement */
+    margin-bottom: 20px; /* Espacement sous le sous-titre (optionnel) */
+	
+}
+h1 {
+    font-size: 40px; /* Plus grand pour les titres principaux */
+}
+
+h2 {
+    font-size: 35px; /* Taille intermédiaire pour les sous-titres */
+}
+h3{
+	font-size: 20px;
+}
+
+p {
+    font-size: 17px; /* Taille des paragraphes */
+}
+
+
+
+
+/* Section des outils */
+.Outils {
+    display: flex; /* Organisation flexible */
+    flex-wrap: wrap; /* Permet le retour à la ligne si nécessaire */
+    gap: 20px; /* Espacement entre les boîtes */
+    justify-content: center; /* Centre les éléments horizontalement */
+}
+
+.outil-box {
+    display: flex;
+    flex-direction: column; /* Texte en dessous des images */
+    align-items: center; /* Centrage du contenu */
+    background-color: #fbf5f3; /* Fond clair pour les boîtes */
+    border: 1px solid #dcdcdc; /* Bordure légère */
+    border-radius: 8px; /* Coins arrondis */
+    padding: 10px; /* Espacement intérieur */
+    width: 120px; /* Taille fixe des boîtes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animation hover */
+}
+
+.outil-box:hover {
+    transform: translateY(-5px); /* Soulève légèrement la boîte */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Augmente l'ombre */
+}
+
+.outil-box img {
+    width: 60px; /* Taille des images */
+    height: 60px;
+    margin-bottom: 10px; /* Espacement avec le texte */
+}
+
+.outil-box p {
+    font-size: 14px; /* Taille du texte */
+    color: #061a40; /* Couleur du texte */
+    font-weight: bold; /* Texte en gras */
+    text-align: center; /* Centrer le texte */
+    margin: 0;
+}
+section p {
+    text-align: justify;
+}
+
+.competences {
+    display: flex; /* Organisation flexible */
+    flex-wrap: wrap; /* Permet le retour à la ligne si nécessaire */
+    justify-content: center; /* Centre les compétences horizontalement */
+    align-items: center; /* Centre verticalement */
+    gap: 20px; /* Espacement entre les cases */
+}
+
+.competence {
+    display: flex;
+    flex-direction: column; /* Texte sous les icônes */
+    align-items: center; /* Centre le contenu dans chaque case */
+    justify-content: space-around; /* Équilibre le contenu verticalement */
+    text-align: center; /* Centre le texte */
+    background-color: #fbf5f3; /* Fond clair */
+    border: 1px solid #dcdcdc; /* Bordure légère */
+    border-radius: 8px; /* Coins arrondis */
+    padding: 15px; /* Espacement intérieur */
+    width: 140px; /* Largeur fixe */
+    height: 180px; /* Hauteur fixe */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre pour effet de profondeur */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animation au survol */
+	
+}
+
+.competence:hover {
+    transform: translateY(-5px); /* Soulève légèrement la boîte */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Augmente l'ombre */
+}
+
+.competence img {
+    width: 60px; /* Taille uniforme des icônes */
+    height: 60px;
+    margin-bottom: 10px; /* Espacement avec le texte */
+}
+
+.competence p {
+    font-size: 14px; /* Taille du texte */
+    color: #061a40; /* Couleur du texte */
+    font-weight: bold; /* Texte en gras */
+    margin: 0;
+}
+
+.competences .competence {
+    text-align: center; /* Centre le texte horizontalement */
+    display: flex; /* Active le mode de mise en page flex */
+    flex-direction: column; /* Aligne les enfants verticalement */
+    align-items: center; /* Centre le contenu horizontalement */
+    justify-content: center; /* Centre le contenu verticalement */
+    text-align: center; /* Centre le texte si plusieurs lignes */
+}
+.competences .competence {
+    padding: 15px;
+    margin: 10px auto; /* Centre chaque compétence horizontalement avec de l'espace autour */
+}
+
+.competences .competence p {
+    text-align: center; /* Centre le texte sous l'icône */
+    margin: 0 auto; /* Garde le texte centré même avec des marges */
+}
+.experience-pro {
+    margin: 40px 20px; /* Espacement autour de la section */
+    text-align: center;
+}
+
+.experience-details {
+    display: flex;
+    justify-content: center; /* Centre les blocs horizontalement */
+    gap: 20px; /* Espacement entre les deux blocs */
+    margin-top: 20px;
+}
+
+.experience-box {
+    flex: 1;
+    max-width: 400px;
+    border: 1px solid #061a40;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fbf5f3;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.experience-box h3 {
+    margin-bottom: 10px;
+    color: #061a40;
+}
+
+.experience-box p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #061a40;
+}
+
+/* Effet au survol (hover) */
+.experience-box:hover {
+    transform: translateY(-10px); /* Le bloc "monte" légèrement */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
+    background-color: #fbf5f3; /* Change la couleur de fond */
+}
+
+
+
+/* Conteneur des outils */
+.Outils {
+    display: flex;
+    justify-content: center; /* Centre les cases horizontalement */
+    gap: 20px; /* Espacement entre les cases */
+    flex-wrap: wrap; /* Permet aux cases de passer à la ligne si l'espace est insuffisant */
+    margin-top: 20px; /* Espacement au-dessus de la section */
+}
+
+/* Style pour chaque case */
+.outil-box {
+    background: #fbf5f3; /* Dégradé de bleu clair */
+    border-radius: 12px; /* Coins arrondis */
+    padding: 10px; /* Espace interne */
+    width: 150px; /* Largeur uniforme */
+    height: 180px; /* Hauteur uniforme */
+    text-align: center; /* Centre le texte et les images */
+    display: flex;
+    flex-direction: column; /* Organise le contenu en colonne */
+    justify-content: center; /* Centre verticalement le contenu */
+    align-items: center; /* Centre horizontalement le contenu */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre portée */
+    transition: transform 0.2s, box-shadow 0.2s; /* Ajoute une transition fluide */
+}
+
+/* Texte du nom dans chaque case */
+.outil-box p {
+    font-size: 20px; /* Texte plus petit */
+    font-weight: bold; /* Texte en gras */
+    margin: 0 0 8px 0; /* Espacement sous le texte */
+    color: #003366; /* Bleu foncé */
+}
+
+/* Image à l'intérieur de chaque case */
+.outil-box img {
+    max-width: 50px; /* Taille plus petite pour les images */
+    max-height: 50px; /* Hauteur maximale pour limiter les dimensions */
+}
+

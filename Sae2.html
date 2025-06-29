@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Domaine d'application</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="project-header">
+        <h1>Projet Domaine d'application</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#contexte-et-objectif">Contexte et objectif</a></li>
+            <li><a href="#outils">Outils</a></li>
+            <li><a href="#realisations">Réalisations</a></li>
+            <li><a href="#exemples">Exemples</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="contexte-et-objectif">
+            <h2>Contexte et objectif</h2>
+            <p>Ce projet a été réalisé dans le cadre de la compétence SAS en BUT 2, il vise à automatiser le traitement et l'organisation des données issues de fichiers Excel à l'aide de SAS. L'objectif était de développer un programme SAS afin d'automatiser le traitement de données des fichiers Excel. Ce projet a été réalisé sur une période de quelques mois allant de septembre à décembre 2024, avec une collaboration entre enseignants et étudiants.</p>
+            <h3>Données :</h3>
+            <p>Nous avions à notre disposition pour ce projet 3 fichiers de données Excel :</p>
+            <ul>
+                <li>Export-Drill Engagements.xlsx</li>
+                <li>Export-Drill Factures.xlsx</li>
+                <li>Export-Factures Provisionnees.xlsx</li>
+            </ul>
+        </section>
+    </main>
+    <main>
+        <section id="outils">
+            <h2>Outils</h2>
+            <p>Pour la réalisation de ce projet, nous avons utilisé le logiciel SAS, et Canva afin de réaliser le support visuel.</p>
+            <h3>Outils utilisés :</h3>
+            <div class="Outils">
+                <div class="outil-box">
+                    <p>SAS</p>
+                    <img src="photo/logosas.png" alt="SAS">
+                </div>
+                <div class="outil-box">
+                    <p>Canva</p>
+                    <img src="photo/logocanva.png" alt="Canva">
+                </div>
+                <div class="outil-box">
+                    <p>Travail en équipe</p>
+                    <img src="photo/logoequipe.png" alt="Travail en équipe">
+                </div>
+            </div>
+        </section>
+    </main>
+    <main>
+        <section id="realisations">
+            <h2>Réalisations</h2>
+            <p>Concernant les étapes, un code SAS a été réalisé, la macro %DRILLS a permis d’automatiser le traitement des fichiers Excel tout en assurant une organisation méthodique des données.</p>
+            <p>Tout d’abord, les chemins des répertoires, les noms des fichiers, et les paramètres indispensables à l’exécution ont été définis pour garantir une centralisation efficace. Par la suite, les fichiers Excel contenant les paramètres généraux ainsi que les informations des dossiers (tels que les noms, compléments et centres) ont été importés à l’aide de la procédure PROC IMPORT.</p>
+            <p>Ces données ont été transformées en macro-variables dynamiques grâce à la fonction CALL SYMPUTX, ce qui a permis une gestion flexible et adapté aux différentes étapes du processus.</p>
+            <p>Une phase importante a consisté à identifier automatiquement les fichiers sources dans le répertoire dédié. Cela a été accompli grâce à la fonction DREAD, utilisée pour sélectionner les fichiers répondant aux critères, comme ceux ayant une extension .xlsx et contenant le mot "EXPORT". En parallèle, le programme a généré les répertoires de sortie propres à chaque dossier, en vérifiant leur existence ou en les créant si besoin.</p>
+            <p>Après l’identification et l’importation des fichiers sources, le programme a effectué un traitement spécifique pour filtrer les données et ne conserver que les éléments pertinents selon les centres associés à chaque dossier.</p>
+            <p>Enfin, les données traitées ont été exportées sous forme de fichiers finaux, soigneusement organisés dans les répertoires correspondants.</p>
+        </section>
+    </main>
+    <main>
+        <section id="exemples">
+            <h2>Exemples</h2>
+            <div class="Exemples">
+                <p>Exemple proc import :</p>
+                <img src="photo/codesas1.png" alt="Exemples">
+            </div>
+            <div class="Exemples">
+                <p>Création des dossiers afin d’organiser les données exportées :</p>
+                <img src="photo/codesas2.png" alt="Exemples">
+            </div>
+            <div class="Exemples">
+                <p>Exportation des données :</p>
+                <img src="photo/codesas3.png" alt="Exemples">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>©  Célia Zuk - Tous droits réservés</p>
+    </footer>
+</body>
+</html>

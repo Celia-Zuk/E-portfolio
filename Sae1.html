@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Plan d'expérience</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="project-header">
+        <h1>Projet Plan d'expérience</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#contexte-et-objectif">Contexte et objectif</a></li>
+            <li><a href="#outils">Outils</a></li>
+            <li><a href="#realisations">Réalisations</a></li>
+            <li><a href="#exemples">Exemples</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="contexte-et-objectif">
+            <h2>Contexte et objectif</h2>
+            <p>Ce projet s’inscrit dans le cadre d'un projet en techniques de sondage et méthodologie d’enquête. Il repose sur une enquête concernant l'utilisation de l'Intelligence Artificielle (IA) dans l'enseignement supérieur, réalisée au sein de l'IUT. L'objectif principal de l'étude est d’analyser les données issues du questionnaire réalisé l'année précédente en les croisant avec les données théoriques de l'IUT, tout en mettant l’accent sur les usages de l’IA.</p>
+            <p>L'enquête a été menée entre le vendredi 12 janvier 2024 et le mercredi 17 janvier 2024 auprès des membres de l’IUT, incluant les étudiants et personnels. L’échantillon est composé de 859 individus, âgés de 16 à 65 ans, avec un taux de réponse de 28 %.</p>
+            <h3>Données :</h3>
+            <p>L'analyse repose sur trois principales sources de données complémentaires : les résultats de l’enquête sous forme d’un fichier Excel, le questionnaire utilisé pour l’enquête, et des données théoriques sur les effectifs étudiants et personnels en 2023-2024.</p>
+        </section>
+    </main>
+    <main>
+        <section id="outils">
+            <h2>Outils</h2>
+            <h3>Outils utilisés :</h3>
+            <div class="Outils">
+                <div class="outil-box">
+                    <p>Excel</p>
+                    <img src="photo/logoexcel.png" alt="Excel">
+                </div>
+                <div class="outil-box">
+                    <p>SAS</p>
+                    <img src="photo/logosas.png" alt="SAS">
+                </div>
+                <div class="outil-box">
+                    <p>Canva</p>
+                    <img src="photo/logocanva.png" alt="Canva">
+                </div>
+                <div class="outil-box">
+                    <p>Travail en équipe</p>
+                    <img src="photo/logoequipe.png" alt="Travail en équipe">
+                </div>
+            </div>
+        </section>
+    </main>
+    <main>
+        <section id="realisations">
+            <h2>Réalisations</h2>
+            <p>Pour ce projet, nous avons dans un premier temps procédé au nettoyage et au traitement de notre base de données en utilisant Excel. Nous avons commencé par retirer toutes les colonnes correspondant aux questions situées dans la partie 3 et au-delà du questionnaire, considérant que seules les parties 1 et 2 étaient pertinentes pour notre analyse.</p>
+            <p>Un redressement des données a été réalisé en utilisant deux variables principales : le statut et la filière. Afin de mener à bien cette étape, nous avons d'abord construit une table de marges contenant les effectifs théoriques pour chaque modalité des variables de redressement. Cette étape a permis de garantir une répartition représentative des données en fonction des caractéristiques de la population-cible.</p>
+            <p>Nous avons ensuite utilisé la macro CALMAR dans le logiciel SAS pour attribuer des poids à chaque individu de l'échantillon, en tenant compte des écarts entre les données observées et les proportions théoriques.</p>
+            <p>Suite à ce redressement, nous avons procédé à une analyse approfondie des données. Des graphiques ont été réalisés pour visualiser les résultats en fonction de la variable statut (étudiants ou personnels) et de la variable formation, tout en tenant compte des poids calculés.</p>
+            <p>Enfin, après avoir fait nos analyses, nous avons créé un support visuel pour notre présentation.</p>
+        </section>
+    </main>
+    <main>
+        <section id="exemples">
+            <h2>Exemples</h2>
+            <div class="Exemples">
+                <p>Redressement :</p>
+                <img src="photo/sondage1.png" alt="Sondage 1">
+            </div>
+            <div class="Exemples">
+                <p>Redressement :</p>
+                <img src="photo/sondage2.png" alt="Sondage 2">
+            </div>
+            <div class="Exemples">
+                <p>Graphique croisant le statut et la question "À quelle fréquence utilisez-vous l'IA ?" :</p>
+                <img src="photo/sondage3.png" alt="Sondage 3">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>©  Célia Zuk - Tous droits réservés</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Plan d'expérience</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="project-header">
+        <h1>Projet Plan d'expérience</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#contexte-et-objectif">Contexte et objectif</a></li>
+            <li><a href="#outils">Outils</a></li>
+            <li><a href="#realisations">Réalisations</a></li>
+            <li><a href="#exemples">Exemples</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="contexte-et-objectif">
+            <h2>Contexte et objectif</h2>
+            <p>Dans le cadre de notre projet intitulé « Description et prévision de séries temporelles », ce projet s’appuie sur des données issues de la FAOSTAT (Food Agriculture Organization Corporate Statistical Database), une base de données mondiale gérée par l’Organisation des Nations Unies pour l’alimentation et l’agriculture, regroupant des informations sur 245 pays. Pour le projet, 2 bases de données étaient mises à notre disposition. Ce projet a été réalisé en décembre et en janvier afin de se terminer le 10 janvier 2025, avec une collaboration entre enseignants et étudiants.</p>
+            <p>L'objectif de ce projet était de faire des prévisions sur l'évolution des surfaces de soja et des surfaces de forêts au Brésil afin d'évaluer l'impact de cette évolution sur les surfaces forestières brésiliennes.</p>
+            <h3>Données :</h3>
+            <ul>
+                <li><strong>FAOSTAT_Soja_Surface.csv :</strong> Ce fichier contient les surfaces de soja cultivées au Brésil de 1961 à 2022. Il se compose de 15 variables et de 62 lignes.</li>
+                <li><strong>FAOSTAT_Forest_Surface.csv :</strong> Ce fichier couvre les surfaces forestières brésiliennes de 1990 à 2022, avec 15 variables et de 33 lignes.</li>
+            </ul>
+        </section>
+    </main>
+    <main>
+        <section id="outils">
+            <h2>Outils</h2>
+            <h3>Outils utilisés :</h3>
+            <div class="Outils">
+                <div class="outil-box">
+                    <p>Excel</p>
+                    <img src="photo/logoexcel.png" alt="Excel">
+                </div>
+                <div class="outil-box">
+                    <p>R</p>
+                    <img src="photo/logor.png" alt="R">
+                </div>
+                <div class="outil-box">
+                    <p>Word</p>
+                    <img src="photo/logoword.png" alt="Word">
+                </div>
+                <div class="outil-box">
+                    <p>Travail en équipe</p>
+                    <img src="photo/logoequipe.png" alt="Travail en équipe">
+                </div>
+            </div>
+        </section>
+    </main>
+    <main>
+        <section id="realisations">
+            <h2>Réalisations</h2>
+            <p>Concernant les étapes, nous avons créé un code R. Tout d’abord, les fichiers de données ont été importés dans le logiciel R à l’aide de la fonction <code>read.csv</code>. Après avoir vérifié la présence de valeurs manquantes et supprimé les colonnes inutiles, deux nouvelles bases simplifiées ont été créées, <code>Soja_2</code> et <code>Foret_2</code>.</p>
+            <p>Les données ont ensuite été transformées en séries temporelles à l’aide de la fonction <code>ts</code>, facilitant ainsi l’analyse des tendances au fil du temps. Les graphiques générés ont révélé une augmentation continue des surfaces de soja, particulièrement marquée après 2000, et une diminution constante des surfaces forestières depuis 1990.</p>
+            <p>Pour modéliser l’évolution des surfaces de soja, plusieurs modèles ont été ajustés : un modèle paramétrique (linéaire, exponentiel, polynomial), un modèle ARIMA, et un modèle Holt-Winters. Le modèle polynomial a donné les meilleurs résultats pour ajuster les données réelles, tandis que le modèle ARIMA a permis de prévoir une augmentation modérée des surfaces de soja jusqu’en 2030.</p>
+            <p>Une analyse des résidus des modèles ARIMA et polynomial a montré que les résidus du modèle ARIMA étaient plus homogènes, tandis que ceux du modèle polynomial étaient plus hétérogènes. Les prédictions jusqu’en 2030 ont révélé une tendance générale à l’augmentation des surfaces de soja, mais avec des différences d’amplitude selon le modèle utilisé.</p>
+            <p>Une régression linéaire a également été réalisée pour établir une relation entre les surfaces de soja (log-transformées) et les surfaces forestières, confirmant une relation linéaire forte et significative.</p>
+            <p>Enfin, des prédictions des surfaces forestières jusqu’en 2030 ont été réalisées à partir des modèles ajustés.</p>
+        </section>
+    </main>
+    <main>
+        <section id="exemples">
+            <h2>Exemples</h2>
+            <div class="Exemples">
+                <p>Création de série temporelle :</p>
+                <img src="photo/serietemp.png" alt="Série temporelle">
+            </div>
+            <div class="Exemples">
+                <p>Ajustement des modèles paramétriques :</p>
+                <img src="photo/serietemp2.png" alt="Série temporelle">
+            </div>
+            <div class="Exemples">
+                <p>Prévisions avec le modèle ARIMA :</p>
+                <img src="photo/serietemp3.png" alt="Série temporelle">
+            </div>
+            <div class="Exemples">
+                <p>Régression linéaire :</p>
+                <img src="photo/serietemp4.png" alt="Série temporelle">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>©  Célia Zuk - Tous droits réservés</p>
+    </footer>
+</body>
+</html>
