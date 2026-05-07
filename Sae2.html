@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Domaine d'application — Célia Zuk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .project-hero {
+            position: relative;
+            padding: 100px 0 70px;
+            border-bottom: 1px solid var(--border);
+            overflow: hidden;
+        }
+        .project-hero .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.1;
+            animation: drift 12s ease-in-out infinite alternate;
+        }
+        .project-hero .orb-1 { width:400px;height:400px;background:var(--blue);top:-100px;left:-100px; }
+        .project-hero .orb-2 { width:250px;height:250px;background:#0ea5e9;bottom:-60px;right:-60px;animation-delay:-5s; }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            font-family: 'DM Mono', monospace;
+            font-size: 0.72rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 40px;
+            transition: color .2s;
+        }
+        .back-link:hover { color: var(--blue-glow); }
+
+        .project-hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-size: clamp(2.2rem, 6vw, 4rem);
+            color: #fff;
+            line-height: 1.1;
+            margin-bottom: 16px;
+        }
+        .project-hero p.lead {
+            font-size: 1rem;
+            color: var(--muted);
+            max-width: 600px;
+            margin-bottom: 0;
+        }
+
+        .meta-strip {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 28px;
+        }
+        .meta-tag {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--blue-glow);
+            background: rgba(59,130,246,0.08);
+            border: 1px solid rgba(59,130,246,0.2);
+            padding: 5px 14px;
+            border-radius: 100px;
+        }
+
+        .project-section {
+            padding: 80px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .project-section h2 {
+            font-size: clamp(1.6rem, 4vw, 2.2rem);
+            margin-bottom: 0.8em;
+        }
+        .project-section h3 {
+            font-size: 1rem;
+            font-family: 'DM Mono', monospace;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--blue-glow);
+            margin: 32px 0 14px;
+        }
+        .project-section p { max-width: 720px; margin-bottom: 1.2em; }
+
+        .project-section ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 1.2em;
+            max-width: 720px;
+        }
+        .project-section ul li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+        .project-section ul li::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--blue-glow);
+            flex-shrink: 0;
+        }
+
+        .tools-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 20px;
+        }
+        .tool-card {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 14px 22px;
+            transition: border-color .3s;
+        }
+        .tool-card:hover { border-color: rgba(59,130,246,0.35); }
+        .tool-card img { width: 32px; height: 32px; object-fit: contain; }
+        .tool-card span { font-size: 0.85rem; font-weight: 500; color: var(--text); }
+
+        .examples-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .example-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            overflow: hidden;
+            transition: border-color .3s, transform .25s;
+        }
+        .example-card:hover { border-color: rgba(59,130,246,0.3); transform: translateY(-3px); }
+        .example-card img { width: 100%; display: block; object-fit: cover; }
+        .example-caption {
+            padding: 14px 18px;
+            font-size: 0.8rem;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ──────────── NAV ──────────── -->
+    <nav>
+        <ul>
+            <li><a href="index.html#presentation">Présentation</a></li>
+            <li><a href="index.html#formations">Formations</a></li>
+            <li><a href="index.html#competences">Compétences</a></li>
+            <li><a href="index.html#realisations">Réalisations</a></li>
+            <li><a href="index.html#projets">Projets Futurs</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ──────────── HERO ──────────── -->
+    <div class="project-hero">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="wrap">
+            <a href="index.html#realisations" class="back-link">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+                Retour aux réalisations
+            </a>
+            <div class="section-label">Projet 02</div>
+            <h1>Domaine d'application</h1>
+            <p class="lead">Automatisation du traitement et de l'organisation de données issues de fichiers Excel à l'aide d'un programme SAS développé dans le cadre du BUT 2.</p>
+            <div class="meta-strip">
+                <span class="meta-tag">SAS</span>
+                <span class="meta-tag">Canva</span>
+                <span class="meta-tag">Travail en équipe</span>
+            </div>
+        </div>
+    </div>
+
+    <main>
+
+        <!-- ──────────── CONTEXTE ──────────── -->
+        <div class="project-section" id="contexte-et-objectif">
+            <div class="wrap">
+                <div class="section-label">01 — Contexte</div>
+                <h2>Contexte et objectif</h2>
+                <p>Ce projet a été réalisé dans le cadre de la compétence SAS en BUT 2. Il vise à automatiser le traitement et l'organisation des données issues de fichiers Excel à l'aide de SAS. L'objectif était de développer un programme SAS afin d'automatiser le traitement de données des fichiers Excel. Ce projet a été réalisé sur une période de quelques mois allant de septembre à décembre 2024, avec une collaboration entre enseignants et étudiants.</p>
+
+                <h3>Données</h3>
+                <p>Nous avions à notre disposition pour ce projet 3 fichiers de données Excel :</p>
+                <ul>
+					<li>Export-Drill Engagements.xlsx</li>
+					<li>Export-Drill Factures.xlsx</li>
+					<li>Export-Factures Provisionnees.xlsx</li>
+				</ul>
+            </div>
+        </div>
+
+       
+
+        <!-- ──────────── RÉALISATIONS ──────────── -->
+        <div class="project-section" id="realisations">
+            <div class="wrap">
+                <div class="section-label">02 — Réalisations</div>
+                <h2>Ce que nous avons fait</h2>
+                <p>Concernant les étapes, un code SAS a été réalisé. La macro <strong style="color:#fff">%DRILLS</strong> a permis d'automatiser le traitement des fichiers Excel tout en assurant une organisation méthodique des données.</p>
+                <p>Tout d'abord, les chemins des répertoires, les noms des fichiers et les paramètres indispensables à l'exécution ont été définis pour garantir une centralisation efficace. Par la suite, les fichiers Excel contenant les paramètres généraux ainsi que les informations des dossiers (tels que les noms, compléments et centres) ont été importés à l'aide de la procédure <strong style="color:#fff">PROC IMPORT</strong>.</p>
+                <p>Ces données ont été transformées en macro-variables dynamiques grâce à la fonction <strong style="color:#fff">CALL SYMPUTX</strong>, ce qui a permis une gestion flexible et adaptée aux différentes étapes du processus.</p>
+                <p>Une phase importante a consisté à identifier automatiquement les fichiers sources dans le répertoire dédié. Cela a été accompli grâce à la fonction <strong style="color:#fff">DREAD</strong>, utilisée pour sélectionner les fichiers répondant aux critères, comme ceux ayant une extension .xlsx et contenant le mot "EXPORT". En parallèle, le programme a généré les répertoires de sortie propres à chaque dossier, en vérifiant leur existence ou en les créant si besoin.</p>
+                <p>Après l'identification et l'importation des fichiers sources, le programme a effectué un traitement spécifique pour filtrer les données et ne conserver que les éléments pertinents selon les centres associés à chaque dossier.</p>
+                <p>Enfin, les données traitées ont été exportées sous forme de fichiers finaux, soigneusement organisés dans les répertoires correspondants.</p>
+            </div>
+        </div>
+
+        <!-- ──────────── EXEMPLES ──────────── -->
+        <div class="project-section" id="exemples">
+            <div class="wrap">
+                <div class="section-label">03 — Exemples</div>
+                <h2>Aperçu du code</h2>
+                <div class="examples-grid">
+                    <div class="example-card">
+                        <img src="photo/codesas1.png" alt="Proc Import">
+                        <div class="example-caption">Exemple de procédure PROC IMPORT pour l'importation des fichiers Excel</div>
+                    </div>
+                    <div class="example-card">
+                        <img src="photo/codesas2.png" alt="Création dossiers">
+                        <div class="example-caption">Création des dossiers afin d'organiser les données exportées</div>
+                    </div>
+                    <div class="example-card">
+                        <img src="photo/codesas3.png" alt="Exportation">
+                        <div class="example-caption">Exportation des données traitées dans les répertoires correspondants</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ──────────── FOOTER ──────────── -->
+    <footer>
+        © Célia Zuk — Tous droits réservés
+    </footer>
+
+</body>
+</html>
